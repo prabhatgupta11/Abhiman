@@ -3,7 +3,7 @@ const { DataTypes } = require("sequelize");
 module.exports = (Sequelize) => {
   const PollAnalytics = Sequelize.define("pollAnalytics", {
     pollId: {
-      type: DataTypes.INTEGER, // Change the data type to INTEGER if it's an integer in the database
+      type: DataTypes.INTEGER, 
       allowNull: false,
     },
     totalVotes: {

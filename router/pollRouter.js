@@ -154,7 +154,7 @@ pollRouter.get('/polls/user/:userId', async (req, res) => {
 
     // Fetch user polls along with associated questions
     const userPolls = await Poll.findAll({
-      where: { userId }, // Assuming userId is the field in the Poll model
+      where: { userId }, 
       include: [
         {
           model: QuestionSet,

@@ -2,17 +2,12 @@ const { DataTypes } = require("sequelize");
 
 module.exports = (Sequelize) => {
   const User = Sequelize.define("user", {
-    // userId: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   unique: true,
-    // },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     votedQuestions: {
-      type: DataTypes.TEXT, // Use TEXT instead of INTEGER[]
+      type: DataTypes.TEXT,
       get() {
         // Parse the stringified array when retrieving from the database
         const value = this.getDataValue('votedQuestions');
