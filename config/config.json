@@ -1,7 +1,9 @@
+
+
 {
   "development": {
     "username": "root",
-    "password": "prabhat@11@@",
+    "password": Put your db password,
     "database": "Poll",
     "host": "localhost",
     "dialect": "mysql"
@@ -21,3 +23,4 @@
     "dialect": "mysql"
   }
 }
+
