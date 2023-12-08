@@ -76,7 +76,7 @@ make sure you have a .env file and PORT inside it.
 
 1. **Create User:**
 
-   - Endpoint: `POST /api/createUser`
+   - Endpoint: `POST userApi/createUser`
    - Description: Create a new user.
    - Request body: 
      ```json
