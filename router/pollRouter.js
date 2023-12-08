@@ -33,7 +33,7 @@ pollRouter.post("/createPolls/:userID", async (req, res) => {
       maxReward,
     });
   // Create a new PollAnalytics instance for the created poll
-  const pollAnalytics = await db.PollAnalytics.create({
+  const pollAnalytics = await PollAnalytics.create({
     pollId: poll.id,
     totalVotes: 0, // Initialize totalVotes to 0
     optionCounts: {}, // Initialize optionCounts to an empty object
@@ -60,7 +60,7 @@ pollRouter.get('/getAllPolls', async (req, res) => {
     const polls = await Poll.findAll({
       include: [
         {
-          model: db.PollAnalytics,
+          model: PollAnalytics,
           as: 'PollAnalyticss',
         },
       ],
@@ -282,7 +282,7 @@ pollRouter.post('/polls/submit/:userId', async (req, res) => {
 
 
 // Fetch the PollAnalytics instance based on some condition 
-const pollAnalyticsInstance = await db.PollAnalytics.findOne({ where: { pollId: id} });
+const pollAnalyticsInstance = await PollAnalytics.findOne({ where: { pollId: id} });
 
 if (pollAnalyticsInstance) {
   // Increment totalVotes by 1
@@ -311,7 +311,7 @@ pollRouter.get('/polls/:pollId/analytics', async (req, res) => {
     const { pollId } = req.params;
 
     // Find the specified poll with analytics
-    const poll = await db.PollAnalytics.findOne({where:{pollId}});
+    const poll = await PollAnalytics.findOne({where:{pollId}});
 
     if (!poll) {
       return res.status(404).json({ message: 'Poll not found' });
@@ -329,7 +329,7 @@ pollRouter.get('/polls/:pollId/analytics', async (req, res) => {
 pollRouter.get('/polls/analytics', async (req, res) => {
   try {
     // Find and aggregate statistics for all polls
-    const overallAnalytics = await db.PollAnalytics.findAll();
+    const overallAnalytics = await PollAnalytics.findAll();
 
     res.status(200).json({ overallAnalytics });
   } catch (error) {
