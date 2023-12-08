@@ -27,4 +27,4 @@ This is a RESTful API for a poll application built using Node.js with Express an
 1. Clone the repository:
 
    ```bash
-   git clone <repository_url>
+   git clone (https://github.com/prabhatgupta11/Abhiman.git)https://github.com/prabhatgupta11/Abhiman.git
