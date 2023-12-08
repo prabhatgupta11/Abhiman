@@ -76,7 +76,7 @@ make sure you have a .env file and PORT inside it.
 
 1. **Create User:**
 
-   - Endpoint: `POST /createUser`
+   - Endpoint: `POST /api/createUser`
    - Description: Create a new user.
    - Request body: 
      ```json
@@ -93,7 +93,7 @@ make sure you have a .env file and PORT inside it.
 
 2. **Create Poll:**
 
-   - Endpoint: `POST /createPolls/:userID`
+   - Endpoint: `POST /api/createPolls/:userID`
    - Description: Create a new poll with question sets.
    - Request body: 
      ```json
@@ -123,7 +123,7 @@ make sure you have a .env file and PORT inside it.
 
 3. **Get All Polls with Analytics:**
 
-   - Endpoint: `GET /getAllPolls`
+   - Endpoint: `GET /api/getAllPolls`
    - Description: Fetch all polls along with analytics.
      Response:
      ```json
@@ -134,7 +134,7 @@ make sure you have a .env file and PORT inside it.
 
 4. **Update a Poll:**
 
-   - Endpoint: `PUT /updatePolls/:pollId`
+   - Endpoint: `PUT /api/updatePolls/:pollId`
    - Description: Update details of a particular poll.
    - Request body: 
      ```json
@@ -154,7 +154,7 @@ make sure you have a .env file and PORT inside it.
 
 5. **Get User's Polls with Questions:**
 
-   - Endpoint: `GET /polls/user/:userId`
+   - Endpoint: `GET /api/polls/user/:userId`
    - Description: Fetch polls and associated questions for a specific user.
      Response:
      ```json
@@ -165,7 +165,7 @@ make sure you have a .env file and PORT inside it.
 
 6. **Submit a Poll:**
 
-   - Endpoint: `POST /polls/submit/:userId`
+   - Endpoint: `POST /api/polls/submit/:userId`
    - Description: Submit a poll response for a user.
    - Request body: 
      ```json
@@ -185,7 +185,7 @@ make sure you have a .env file and PORT inside it.
 
 7. **Get Poll Analytics for a Poll:**
 
-   - Endpoint: `GET /polls/:pollId/analytics`
+   - Endpoint: `GET /api/polls/:pollId/analytics`
    - Description: Fetch analytics for a particular poll.
      Response:
      ```json
@@ -196,7 +196,7 @@ make sure you have a .env file and PORT inside it.
 
 8. **Get Overall Poll Analytics:**
 
-   - Endpoint: `GET /polls/analytics`
+   - Endpoint: `GET /api/polls/analytics`
    - Description: Fetch aggregated statistics for all polls.
      Response:
      ```json
