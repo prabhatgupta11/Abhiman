@@ -8,30 +8,6 @@ const Poll = db.Poll;
 const QuestionSet = db.QuestionSet;
 const PollAnalytics=db.PollAnalytics
 
-//create user
-
-pollRouter.post("/createUser", async (req, res) => {
-
-  // return console.log(1221)
-  try {
-
-    const {
-      name
-    } = req.body;
-
-    // Create a new poll
-    const user = await db.User.create({
-    name
-    });
-
-   
-
-    res.status(201).json({ message: "User created successfully" });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Internal Server Error" });
-  }
-});
 // Create a new poll with question sets
 pollRouter.post("/createPolls/:userID", async (req, res) => {
   try {
