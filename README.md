@@ -28,3 +28,21 @@ This is a RESTful API for a poll application built using Node.js with Express an
 
    ```bash
    git clone (https://github.com/prabhatgupta11/Abhiman.git)https://github.com/prabhatgupta11/Abhiman.git
+
+### Install dependencies:
+
+npm install
+
+
+### Set up the database:
+
+Create a MySQL database and configure the connection in config/config.json.
+
+### Run database 
+
+
+
+```bash
+
+npx sequelize-cli mysql2
+
