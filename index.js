@@ -5,7 +5,7 @@ const pollRouter=require("./router/pollRouter")
 const userRouter=require("./router/userRouter")
 const app=express();
 app.use(express.json())
-
+ 
 app.use("/api",pollRouter)
 app.use("/userApi",userRouter)
 

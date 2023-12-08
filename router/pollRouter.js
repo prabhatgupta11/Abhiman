@@ -7,7 +7,7 @@ const sequelize = db.sequelize;
 const Poll = db.Poll;
 const QuestionSet = db.QuestionSet;
 const PollAnalytics=db.PollAnalytics
-
+ 
 // Create a new poll with question sets
 pollRouter.post("/createPolls/:userID", async (req, res) => {
   try {

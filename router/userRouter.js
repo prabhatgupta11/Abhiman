@@ -3,10 +3,6 @@ const userRouter = express.Router();
 const db = require("../models/index");
 
 // Now you can access the Sequelize instance and models
-const sequelize = db.sequelize;
-const Poll = db.Poll;
-const QuestionSet = db.QuestionSet;
-const PollAnalytics=db.PollAnalytics
 const User=db.User
 
 //create user
