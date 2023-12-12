@@ -3,7 +3,7 @@
 {
   "development": {
     "username": "root",
-    "password": "prabhat@11@@",
+    "password": PUT your database password here,
     "database": "Poll",
     "host": "localhost",
     "dialect": "mysql"
